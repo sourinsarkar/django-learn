@@ -13,8 +13,6 @@
 <body>
     <h1>Hello from index template.</h1>
 
-    {{ companylist }}
-
     <table>
         <tr>
             <td>Name</td>
@@ -23,8 +21,9 @@
         {% for company in companylist %}
         
         <tr>
-            <td>Hello</td>
-            <td>Hello2</td>
+            <td>{{ forloop.counter }}</td>
+            <td>{{ company.name }}</td>
+            <td>{{ company.serial }}</td>
         </tr>
 
         {% endfor %}
