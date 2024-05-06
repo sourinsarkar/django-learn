@@ -23,7 +23,16 @@ def companies(request):
         {"name": "Grab", "serial": 105},
     ]
 
-    for company in companylist:
-        print(company)
+    # for company in companylist:
+    #     print(company)
 
-    return render(request, "index.html", context = {"companylist": companylist})
+    text = """Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia debitis error cupiditate corporis adipisci suscipit odit, officia est quam veritatis asperiores eos laboriosam, possimus molestiae laborum? Perferendis sunt consequatur dicta ut excepturi magni quod voluptates pariatur repellat delectus architecto exercitationem enim esse, eum, veritatis tempora, quae voluptate eos dolores iure impedit asperiores dolorem. Tempora officiis voluptatibus quis fugit odio facilis architecto molestiae quas minus, dolorum ad vitae hic sunt quo corporis ab nobis odit amet magnam, porro quaerat numquam corrupti. Officiis, illum? Ipsum odio veritatis ipsa quas inventore, iste mollitia aut, eaque, deserunt eum id expedita delectus? Obcaecati, earum praesentium."""
+    vegetables = ["Pumpkin", "Tomato", "Potatoe"]
+
+    return render(request, "index.html", context={"companylist": companylist, "text": text, "vegetables": vegetables})
+
+def about(request):
+    return render(request, "about.html")
+
+def contact(request):
+    return render(request, "contact.html")

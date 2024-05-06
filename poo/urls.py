@@ -24,4 +24,6 @@ urlpatterns = [
     path("success-page", success_page, name = "success_page"),
     path("page", page, name = "page"),
     path("pagex", companies, name = "page"),
+    path("contact", contact, name="contact"),
+    path("about", about, name="about")
 ]

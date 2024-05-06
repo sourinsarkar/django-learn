@@ -15,18 +15,37 @@
 
     <table>
         <tr>
+            <td>S. No</td>
             <td>Name</td>
             <td>Serial</td>
-        </tr>g
+            <td>Random</td>
+        </tr>
         {% for company in companylist %}
         
         <tr>
             <td>{{ forloop.counter }}</td>
             <td>{{ company.name }}</td>
             <td>{{ company.serial }}</td>
+            <td>
+                {% if company.serial >= 103 %}
+                <td>👍</td>
+                {% else %}
+                <td>👎</td>
+                {% endif %}
+            </td>
         </tr>
-
+        
         {% endfor %}
     </table>
+    
+    {{ text|truncatechars:100 }}
+    <p>
+        {% if "Potatoe" in vegetables %}
+        Yes Available
+        {% else %}
+        Not Available
+        {% endif %}
+    </p>
+
 </body>
 </html>
