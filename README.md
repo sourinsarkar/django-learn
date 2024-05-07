@@ -31,3 +31,13 @@ else
 <variable> = <modelname>.objects.create(<input all data>)
 
 // no need to do the save step
+
+To query via shell:-
+
+<model>.objects.all()[0].<anyproperty_name_from_the_model>
+
+To update
+
+Way 1: <modelname>.objects.filter(id=2).update(<propertyname> = "xyz")
+
+Way 2: <variable> =  <modelname>.objects.get(id=)

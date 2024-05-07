@@ -9,3 +9,10 @@ class Student(models.Model):
     address = models.TextField()
     image = models.ImageField()
     file = models.FileField()
+
+class Car(models.Model):
+    car_name = models.CharField(max_length = 100)
+    speed = models.IntegerField(default = 50)
+
+    def __str__(self) -> str:
+        return self.car_name
