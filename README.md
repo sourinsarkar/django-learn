@@ -11,3 +11,23 @@ Note: Add app names to settings.py in INTERNAL_APPS or create a new custom array
 Created a ```base.html``` template as a cover code for all other html code.
 
 Need to use {% extends "base.html %}
+
+--------------------------------
+
+Shell
+
+python manage.py shell
+
+from <appname>.models import *
+
+<variable> = <modelname>(<input all data>)
+
+<variable>.save()
+
+<variable> // Write this to print the object
+
+else
+
+<variable> = <modelname>.objects.create(<input all data>)
+
+// no need to do the save step
